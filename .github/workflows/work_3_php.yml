@@ -1,0 +1,20 @@
+name: Work Sofia 3 - PHP
+on: [push]
+
+jobs:
+  build-php:
+    runs-on: ubuntu-latest
+    container: php:8.3-cli
+
+    steps:
+      - name: Verificar entorno
+        run: |
+          echo "Ejecutando dentro de Docker"
+          php --version
+          php -r "echo 'PHP listo en el contenedor' . PHP_EOL;"
+
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+
+      - name: Ejecutar aplicacion
+        run: php app.php
