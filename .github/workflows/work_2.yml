@@ -1,5 +1,6 @@
 name: Work Sofia 2
 on: [push] 
+
 jobs:
   build-node:
     runs-on: ubuntu-latest
