@@ -1,5 +1,5 @@
 name: Work Sofia 1
-on: [push]
+on: [pull]
 jobs:
   build:
     runs-on: ubuntu-latest
